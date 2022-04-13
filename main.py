@@ -19,20 +19,8 @@ longpoll = VkLongPoll(vk)
 
 # Основной цикл
 for event in longpoll.listen():
-
-    # Если пришло новое сообщение
-    if event.type == VkEventType.MESSAGE_NEW:
-
-        # Если оно имеет метку для меня( то есть бота)
-        if event.to_me:
-
-            # Сообщение от пользователя
-            request = event.text
-
-            # Каменная логика ответа
-            if request == "привет":
-                write_msg(event.user_id, "Хай")
-            elif request == "пока":
-                write_msg(event.user_id, "Пока((")
-            else:
-                write_msg(event.user_id, "Не понял вашего ответа...")
+    if not event.from_chat:
+        d =datetime.datetime.now().hour
+        if datetime.datetime.today().weekday() == 2 and (d ==14 or d == 18 or d ==20):
+            write_msg(event.user_id, "завтра ОБЖ! всем принести тетрадки, иначе не будем смотреть видео, а будем писать в тетрадках!")
+        # Если пришло новое сообщение
