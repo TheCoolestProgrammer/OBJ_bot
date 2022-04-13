@@ -21,19 +21,19 @@ longpoll = VkLongPoll(vk)
 for event in longpoll.listen():
     if not event.from_chat:
         d =datetime.datetime.now().hour
-        if datetime.datetime.today().weekday() == 1 and (18< d >=14):
+        if datetime.datetime.today().weekday() == 1 and (18> d >=14):
             if days_counter[0] !=1:
                 write_msg(event.user_id, "завтра ОБЖ! всем принести тетрадки, иначе не будем смотреть видео, а будем писать в тетрадках!")
                 days_counter[0] = 1
-        if datetime.datetime.today().weekday() == 1 and (20<d >=18):
+        if datetime.datetime.today().weekday() == 1 and (20>d >=18):
             if days_counter[1] != 1:
                 write_msg(event.user_id, "завтра ОБЖ! всем принести тетрадки, иначе не будем смотреть видео, а будем писать в тетрадках!")
                 days_counter[1] = 1
-        if datetime.datetime.today().weekday() == 1 and (23<d >=20):
+        if datetime.datetime.today().weekday() == 1 and (23>d >=20):
             if days_counter[2] != 1:
                 write_msg(event.user_id, "завтра ОБЖ! всем принести тетрадки, иначе не будем смотреть видео, а будем писать в тетрадках!")
                 days_counter[2] = 1
-        if datetime.datetime.today().weekday() == 2 and (d <=9):
+        if datetime.datetime.today().weekday() == 2 and (d >=9):
             if days_counter[3] != 1:
                 write_msg(event.user_id, "сегодя ОБЖ! всем принести тетрадки, иначе не будем смотреть видео, а будем писать в тетрадках!")
                 days_counter[3] = 1
