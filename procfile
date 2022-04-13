@@ -1,1 +1,1 @@
-obj_bot: python main.py
+web: python main.py
