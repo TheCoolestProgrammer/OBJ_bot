@@ -19,7 +19,7 @@ def processing():
     api = vk.API(session)
     api.messages.send(access_token=token, chat_id=group_id,message="asdiuhsdfhiusdaihu", random_id=0)
 
-    return ""
+    return "a322dfc1"
 
 
 
